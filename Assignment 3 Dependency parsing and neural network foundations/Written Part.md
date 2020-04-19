@@ -6,7 +6,7 @@
 
 $$\mathrm{i.}$$  **$m$** consists of two parts. We could see the first part $\beta_1m$ as a push to maintain its origin trend while the other $(1-\beta_1)\delta$ as a push to a variance. $\beta_1$ is often set to 0.9, which implies that **$m$** tends to keep its direction preventing from overshooting. Hence, The low variance could help $J$ reduce the vibration on the vertical direction while downward to the convergence point.
 
-$$\mathrm{ii.}$$ 
+$$\mathrm{ii.}$$ Weights that receive high gradients will have their effective learning rate reduced. And Weights that receive small / infrequent updates will have effective learning rate increased.
 
 ##### (b) Dropout #####
 
@@ -53,5 +53,12 @@ $$\mathrm{ii.}$$ Dropout is design for preventing overfitting and improving robu
 
 (b) 2$n$. For each word in sentence, it takes one step to shift word from buffer to stack and another one to pop from stack. Hence the total step is double the number of words.
 
+(f) Dependency parse correction is as following:
 
+|                 | Error Type                             | Incorrect Dependency        | Correct Dependency          |
+| --------------- | -------------------------------------- | --------------------------- | --------------------------- |
+| $\mathbb{i.}$   | Verb Phrase Attachment Error           | wedding$\rightarrow$fearing | heading$\rightarrow$fearing |
+| $\mathbb{ii.}$  | Coordination Attachment Error          | rescue$\rightarrow$and      | rush$\rightarrow$and        |
+| $\mathbb{iii.}$ | Prepositional Phrase Attachment Error: | named$\rightarrow$Midland   | guy$\rightarrow$Midland     |
+| $\mathbb{iv.}$  | Modier Attachment Error                | elements$\rightarrow$most   | crucial$\rightarrow$most    |
 
